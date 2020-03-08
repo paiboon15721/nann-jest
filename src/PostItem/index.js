@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Comp = ({ title, body }) => {
   if (!title) {
@@ -11,6 +12,11 @@ const Comp = ({ title, body }) => {
       <p data-testid="post-body">{body}</p>
     </div>
   )
+}
+
+Comp.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string.isRequired,
 }
 
 export default Comp
